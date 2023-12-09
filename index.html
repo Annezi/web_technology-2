@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.5">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<title>Document</title>
+</head>
+
+<body>
+	<form action="" method="post" id="myForm">
+		<div class="text-h1">Регистрация на сайте</div>
+		<div class="parameter">
+			<div class="parameter-names">Имя:</div>
+			<div><input type="text" id="name" name="name" required minlength="2" /></div>
+		</div>
+		<div class="parameter">
+			<div class="parameter-names">Фамилия:</div>
+			<div><input type="text" id="surname" name="surname" required minlength="2" /></div>
+		</div>
+		<div class="parameter">
+			<div class="parameter-names">Никнейм:</div>
+			<div><input type="text" id="surname" name="surname" required minlength="2" /></div>
+		</div>
+		<div class="parameter">
+			<div class="parameter-names">Пол:</div>
+			<div class="form_radio">
+				<div class="first-radio">
+					<input type="radio" id="gender-m" name="gender" value="Женщина" checked>
+					<label for="gender-m">Женщина</label>
+				</div>
+				<div class="second-radio">
+					<input type="radio" id="gender-w" name="gender" value="Мужчина">
+					<label for="gender-w">Мужчина</label>
+				</div>
+			</div>
+		</div>
+		<div class="parameter">
+			<div class="parameter-names">Возраст:</div>
+			<div><input type="number" id="age" min="0" name="age" /></div>
+		</div>
+		<div class="parameter">
+			<div class="parameter-names">Номер телефона:</div>
+			<div><input type="tel" id="tel-num" min="0" name="tel-num" maxlength="12" /></div>
+		</div>
+		<div class="parameter">
+			<div class="parameter-names">Электронная почта:</div>
+			<div><input type="email" id="email" name="email" /></div>
+		</div>
+		<div class="parameter">
+			<div class="parameter-names">Пароль</div>
+			<div><input type="password" id="password" name="password" required minlength="8" maxlength="13" /></div>
+		</div>
+		<div class="parameter">
+			<div class="parameter-names">Моя деятельность:</div>
+			<div class="form_radio">
+				<div class="first-radio">
+					<input type="radio" id="person-type-1" name="person-type" value="Я хочу публиковать">
+					<label for="person-type-1">Я хочу публиковать</label>
+				</div>
+				<div class="second-radio">
+					<input type="radio" id="person-type-2" name="person-type" value="Я хочу наблюдать">
+					<label for="person-type-2">Я хочу наблюдать</label>
+				</div>
+			</div>
+		</div>
+
+		<div class="parameter-names">Мне нравится:</div>
+
+		<div class="checkbox">
+			<input type="checkbox" name="type-cosmetic" class="check" id="type-cosmetic" value="Искать косметику" />
+			<label for="type-cosmetic" class="label">
+				<svg width="50" height="50" viewbox="0 0 100 100">
+					<rect x="30" y="20" width="50" height="50" stroke="black" fill="none" />
+					<g transform="translate(0,-952.36222)">
+						<path
+							d="m 56,963 c -102,122 6,9 7,9 17,-5 -66,69 -38,52 122,-77 -7,14 18,4 29,-11 45,-43 23,-4 "
+							stroke="black" stroke-width="3" fill="none" class="path1" />
+					</g>
+				</svg>
+				<span>Искать косметику</span>
+			</label>
+		</div>
+		<div class="checkbox">
+			<input type="checkbox" name="type-makeup" class="check" id="type-makeup" value="Делать макияж" />
+			<label for="type-makeup" class="label">
+				<svg width="50" height="50" viewbox="0 0 100 100">
+					<rect x="30" y="20" width="50" height="50" stroke="black" fill="none" />
+					<g transform="translate(0,-952.36222)">
+						<path
+							d="m 56,963 c -102,122 6,9 7,9 17,-5 -66,69 -38,52 122,-77 -7,14 18,4 29,-11 45,-43 23,-4 "
+							stroke="black" stroke-width="3" fill="none" class="path1" />
+					</g>
+				</svg>
+				<span>Делать макияж</span>
+			</label>
+		</div>
+		<div class="checkbox">
+			<input type="checkbox" name="type-blogger" class="check" id="type-blogger" value="Снимать бьюти контент" />
+			<label for="type-blogger" class="label">
+				<svg width="50" height="50" viewbox="0 0 100 100">
+					<rect x="30" y="20" width="50" height="50" stroke="black" fill="none" />
+					<g transform="translate(0,-952.36222)">
+						<path
+							d="m 56,963 c -102,122 6,9 7,9 17,-5 -66,69 -38,52 122,-77 -7,14 18,4 29,-11 45,-43 23,-4 "
+							stroke="black" stroke-width="3" fill="none" class="path1" />
+					</g>
+				</svg>
+				<span>Снимать бьюти контент</span>
+			</label>
+		</div>
+
+
+		<input type="button" class="btn" value="Отправить" onclick="submitForm()">
+		<input type="reset" class="btn" value="Очистить форму">
+	</form>
+
+	<div id="output"></div>
+	<script src="script.js"></script>
+</body>
+
+</html>
